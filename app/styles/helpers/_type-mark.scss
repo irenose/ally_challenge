@@ -1,0 +1,38 @@
+.type_mark {
+	vertical-align: super;
+}
+
+.type_mark_6px {
+	@extend .type_mark;
+	font-size: 6px
+}
+
+.type_mark_8px {
+	@extend .type_mark;
+	font-size: 8px
+}
+
+.type_mark_10px {
+	@extend .type_mark;
+	font-size: 10px
+}
+
+.type_mark_12px {
+	@extend .type_mark;
+	font-size: 12px
+}
+
+.type_mark_14px {
+	@extend .type_mark;
+	font-size: 12px
+}
+
+.type_mark_16px {
+	@extend .type_mark;
+	font-size: 12px
+}
+
+.type_mark_18px {
+	@extend .type_mark;
+	font-size: 12px
+}

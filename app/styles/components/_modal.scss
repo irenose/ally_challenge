@@ -1,0 +1,121 @@
+/* `Modal
+----------------------------------------------------------------------------------------------------*/
+
+#modal_wrapper {
+  display: none;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+#modal_overlay,
+#modal_iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#modal_overlay {
+	background: #000;
+	opacity: 0.5;
+}
+
+#modal_window {
+	visibility: hidden;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+#modal_window {
+	background: #fff;
+  box-shadow: 0px 0px 6px 3px rgba(0,0,0,0.65);
+	padding: 1.6rem 1.6rem;
+	width: 45.0rem;
+}
+
+#modal_content {
+  float: left;
+	overflow: hidden;
+  padding: 0 1.4rem 1.4rem;
+  width: 100%;
+
+  .heading {
+    color: #505050;
+  }
+}
+
+#modal_content object,
+#modal_content embed {
+	display: block;
+	margin: 0 auto;
+}
+
+#modal_content img {
+	display: none;
+}
+
+#modal_content img.modal_placeholder {
+	visibility: hidden;
+	width: 100%;
+	height: 100px;
+}
+
+#modal_image_wrapper img {
+	display: block;
+	margin: 0 auto;
+}
+
+#modal_close {
+  background: url(../images/close.png) no-repeat;
+	cursor: pointer;
+  display: block;
+	font-size: 0;
+  float: right;
+	overflow: hidden;
+	text-indent: -9999px;
+	width: 1.6rem;
+	height: 1.5rem;
+}
+
+#modal_close:hover {
+	background-position: left bottom;
+}
+
+.ub_modal-container {
+  display: none;
+}
+
+
+.form-group {
+  label{
+    display: block;
+    padding-bottom: 2.0rem;
+  }
+
+  span{
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+    line-height: 3.7rem;
+    width: 23%;
+  }
+
+  input[type=text],
+  input[type=password] {
+    padding: .8rem 1rem;
+    width: 77%;
+  }
+
+  input[type=submit] {
+    border: none;
+    float: right;
+    width: 13.0rem;
+  }
+}

@@ -1,0 +1,27 @@
+.normal-header {
+  @extend %font-weight-normal;
+}
+
+.main-header {
+  @include font-size("size-1");
+  @extend %high-light-text;
+}
+
+.heading {
+  @include font-size(size-2);
+
+  @include breakpoint(sm) {
+    @include font-size(size-4);
+  }
+}
+
+.split-header {
+  font-weight: 400;
+  line-height: 4.6rem;
+  position: relative;
+
+  span {
+    @extend %text-breaker;
+    font-weight: 100;
+  }
+}

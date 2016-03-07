@@ -1,0 +1,124 @@
+/* ------------------------------------------------------------------/
+	* Main navigation
+/* ------------------------------------------------------------------*/
+
+.nav-list {
+  @extend %remove-list-style;
+  @extend %element-float-right;
+
+  > * {
+    @extend %element-float-left;
+  }
+}
+
+.inline-nav {
+  @include breakpoint(sm) {
+    display: none;
+  }
+
+  @include breakpoint(md) {
+    display: block;
+  }
+
+  display: inline-block;
+}
+
+.stacked-nav {
+  display: block;
+}
+
+.main-nav-container {
+  background-color: urbank-colors(color-primary-1);
+}
+
+.main-list-content {
+  line-height: 1.8em;
+
+  &:last-child > a{
+    padding-right: 0px;
+  }
+}
+
+.main-nav {
+  .nav-link {
+    @include main-nav-mixin(urbank-colors(color-main-nav-link), urbank-colors(color-primary-dark));
+    @extend %nav-link-builder;
+  }
+}
+
+.footer-nav {
+  .nav-link {
+    @include main-nav-mixin(urbank-colors(color-primary-1), urbank-colors(color-footer-bg));
+    @extend %nav-link-builder;
+    padding-top: 0;
+  }
+}
+
+/* Initial menu */
+.menu {
+  background: #000;;
+  left: -285px;  /* start off behind the scenes */
+  height: 100%;
+  position: fixed;
+  width: 285px;
+  z-index: 4;
+}
+
+/* Basic styling */
+.menu ul {
+  border-top: 1px solid #636366;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  border-bottom: 1px solid #636366;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 45px;
+  padding-bottom: 3px;
+  padding-left: 20px;
+  padding-top: 3px;
+}
+
+.menu a {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-close {
+  color: urbank-colors(color-primary-1);
+  cursor: pointer;
+  font-size: 30px;
+  padding-left: 30px;
+  padding-top: 10px;
+}
+
+.icon-menu {
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-top: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @include breakpoint(sm) {
+    display: block;
+    float: right;
+    padding: 1rem 0 0 0;
+  }
+
+  @include breakpoint(md) {
+    display: none;
+  }
+}
+
+.icon-menu i {
+  margin-right: 5px;
+}

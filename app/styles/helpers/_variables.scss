@@ -1,0 +1,41 @@
+/* ------------------------------------------------------------------/
+	* DIMENSIONS
+/* ------------------------------------------------------------------*/
+$page-max-width: 940px;
+
+/* ------------------------------------------------------------------/
+	* COLORS
+/* ------------------------------------------------------------------*/
+$urbank-colors: (
+  'color-global-text': #505050,
+  'color-main-nav-link': #ffffff,
+  'color-primary-1': #328fc2,
+  'color-primary-2': #650360,
+  'color-primary-dark': #006899,
+  'color-tables-hue-dark': #ddebe1,
+  'color-tables-hue-light': #edf5f0,
+  'color-footer-bg': #e7e8e9
+);
+
+/* ------------------------------------------------------------------/
+	* BREAKPOINTS
+/* ------------------------------------------------------------------*/
+
+ @mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (min-width: 70em) { @content ; }
+  }
+   @else if $point == laptop {
+     @media (min-width: 64em) { @content ; }
+  }
+    @else if $point == tablet {
+     @media (min-width: 50em) { @content ; }
+  }
+   @else if $point == phablet {
+     @media (min-width: 37.5em)  { @content ; }
+  }
+  @else if $point == mobileonly {
+     @media (max-width: 37.5em)  { @content ; }
+
+  }
+}

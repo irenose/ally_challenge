@@ -1,0 +1,54 @@
+body .clear {
+	clear: both;
+}
+
+ul.clear li{
+	clear: both;
+}
+
+html body .clear-left {
+	clear: left;
+}
+
+html body .clear-right {
+	clear: right;
+}
+
+div.clear,
+span.clear {
+	background: none;
+	border: 0;
+	display: block;
+	float: none;
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix:after,
+.clearfixed li:after {
+	clear: both;
+	content: '.';
+	display: block;
+	visibility: hidden;
+	height: 0;
+}
+
+.clearfix,
+.clearfixed li {
+	display: inline-block;
+}
+
+* html .clearfix,
+* html .clearfixed li {
+	height: 1%;
+}
+
+.clearfix,
+.clearfixed li {
+	display: block;
+}

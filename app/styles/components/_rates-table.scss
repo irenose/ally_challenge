@@ -1,0 +1,46 @@
+
+$set-padding: 1em;
+.u-rates-table {
+  td {
+    padding: .7em 1em;
+
+    &:not(:first-child) {
+      font-size: 1.8rem;
+    };
+  }
+
+  th {
+    @extend %tiny-font;
+    padding-right: 1.6rem;
+  }
+
+  tr {
+    &:nth-child(even) {
+      background-color: urbank-colors(color-tables-hue-dark);
+    }
+
+    &:nth-child(odd){
+      background-color: urbank-colors(color-tables-hue-light);
+    }
+
+    &:first-child{
+      background-color:#fff;
+    }
+
+    &:not(:first-child) {
+      td {
+        font-size: 1.7rem;
+      }
+    }
+
+    &:nth-child(2){
+      font-weight: bold;
+    }
+  }
+}
+
+.deposit-amount {
+  @extend %padding-right-small;
+  @extend %tiny-font;
+  float: right;
+}

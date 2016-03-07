@@ -1,0 +1,19 @@
+aside {
+  &.col {
+    @include breakpoint(xs) {
+      display: none;
+    }
+
+    @include breakpoint(sm) {
+      display: none;
+    }
+
+    @include breakpoint(md) {
+      display: block;
+    }
+  }
+
+  .latest-news {
+    padding-bottom: 1rem;
+  }
+}

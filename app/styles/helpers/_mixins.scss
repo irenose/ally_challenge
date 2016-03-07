@@ -1,0 +1,64 @@
+// https://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+@mixin font-size-rem($size-value: 1.6) {
+  font-size: ($size-value * 10) + px;
+  font-size: $size-value + rem;
+}
+
+@mixin font-size($size: false) {
+  @if ($size == "size-1") {
+    @include font-size-rem(3.6);
+    line-height: 1.25;
+  }
+  @else if ($size == "size-2") {
+    @include font-size-rem(2.8);
+    line-height: 1.25;
+  }
+  @else if ($size == "size-3") {
+    @include font-size-rem(2.6);
+    line-height: 1.25;
+  }
+  @else if ($size == "size-4") {
+    @include font-size-rem(2.2);
+    line-height: 1.25;
+  }
+  @else if ($size == "size-5") {
+    @include font-size-rem(1.4);
+    line-height: 1.35;
+  }
+  @else if ($size == "size-6") {
+    @include font-size-rem(1.2);
+		letter-spacing: 1px;
+		line-height: 1.25;
+  }
+}
+
+@mixin main-nav-mixin ($color-links, $color-current-bg) {
+  color: $color-links;
+  font-size: 1.5rem;;
+
+  &.current {
+    background-color: $color-current-bg;
+  }
+}
+
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: 320px) { @content; }
+  }
+
+  @else if $class == sm {
+    @media (min-width: 320px) { @content; }
+  }
+
+  @else if $class == md {
+    @media (min-width: 740px) { @content; }
+  }
+
+  @else if $class == lg {
+    @media (min-width: 1200px) { @content; }
+  }
+
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}

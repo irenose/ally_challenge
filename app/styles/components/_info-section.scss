@@ -1,0 +1,46 @@
+.info-block {
+	float: left;
+	padding: 14px;
+	position: relative;
+
+	.info-graphic-block {
+		position: absolute;
+		right: 28px;
+		top: -96px;
+
+		@include breakpoint(sm) {
+      display: none;
+	  }
+
+		@include breakpoint(md) {
+      display: block;
+			right: 5%;;
+	  }
+	}
+}
+
+.info-detail-block {
+	.high-light{
+	  @extend %high-light-text;
+	}
+
+	background-color: #bbd8c4;
+}
+
+.mobile-info-detail {
+	> p {
+		margin: 0;
+
+		@include breakpoint(md) {
+			padding-right: 2%;
+		}
+	}
+
+	@include breakpoint(sm) {
+    width: 100%;
+  }
+
+	@include breakpoint(md) {
+		width: 82.97%;
+	}
+}

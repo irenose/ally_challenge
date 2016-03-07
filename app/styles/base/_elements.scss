@@ -1,0 +1,105 @@
+html {
+	font-size: 62.5%; /* Sets up Base 10 for rem calculations */
+	width: 100%;
+}
+
+body {
+	@include font-size-rem(1.4);
+	color: urbank-colors(color-text-default);
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	line-height: 1.4;
+	overflow-x: hidden;
+}
+
+main[role=main] {
+	width: 100%;
+}
+
+aside,
+.main-page-content {
+	float:left;
+}
+
+.main-page-content {
+	@include breakpoint(xs) {
+    float: none;
+    width: 100%;
+  }
+
+	&.col {
+		@include breakpoint(sm) {
+			width: 100%;
+		}
+
+		@include breakpoint(md) {
+			width: 74.45%;
+		}
+	}
+}
+
+img {
+	line-height: 0;
+}
+
+a {
+	color: urbank-colors(color-primary-1);
+
+	p > & {
+		text-decoration:underline;
+	}
+}
+
+a,
+a:hover {
+	text-decoration: none;
+}
+
+a:focus {
+	outline: none;
+	border: 0;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+	margin-bottom: 0.4em;
+}
+
+sup {
+	font-size: 0.7em;
+	line-height: 100%;
+	color: #999;
+	vertical-align: top;
+}
+
+sub {
+	font-size: 0.7em;
+	line-height: 100%;
+	color: #999;
+	vertical-align: bottom;
+}
+
+i,
+em,
+dfn,
+cite {
+	font-style: italic;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}

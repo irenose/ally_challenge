@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+/* =Containers
+--------------------------------------------------------------------------------*/
+.container_12 {
+  margin: 0 auto;
+  max-width: 940px;
+	width: 92%;
+}
+
+/* = ROWS
+--------------------------------------------------------------------------------*/
+// .row {
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
+.page-row {
+  padding-bottom: 30px;
+	padding-top: 30px;
+}
+
+/*  SECTIONS
+--------------------------------------------------------------------------------*/
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col  {
+	display: block;
+	float:left;
+	margin: 0 0 0 2.18%;
+}
+
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:"";
+  display:table;
+}
+
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF TWELVE  */
+/*  GRID OF TWELVE  */
+.span-12-of-12 {
+	width: 100%;
+}
+
+.span-11-of-12 {
+  	width: 91.48%;
+}
+.span-10-of-12 {
+  	width: 82.97%;
+}
+
+.span-9-of-12 {
+  	width: 74.45%;
+}
+
+.span-8-of-12 {
+  	width: 65.94%;
+}
+
+.span-7-of-12 {
+  	width: 57.42%;
+}
+
+.span-6-of-12 {
+  	width: 48.91%;
+}
+
+.span-5-of-12 {
+  	width: 40.39%;
+}
+
+.span-4-of-12 {
+  	width: 31.88%;
+}
+
+.span-3-of-12 {
+  	width: 23.36%;
+}
+
+.span-2-of-12 {
+  	width: 14.85%;
+}
+
+.span-1-of-12 {
+  	width: 6.335%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+
+    .span-1-of-12, .span-2-of-12, .span-3-of-12, .span-4-of-12, .span-5-of-12, .span-6-of-12, .span-7-of-12, .span-8-of-12, .span-9-of-12, .span-10-of-12, .span-11-of-12, .span-12-of-12 {
+	width: 100%;
+	}
+}

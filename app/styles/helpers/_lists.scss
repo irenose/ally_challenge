@@ -1,0 +1,17 @@
+
+ul.bulleted-list {
+	li {
+		margin-bottom: .6rem;
+		padding-left: 1em;
+    position: relative;
+
+		&:before {
+      bottom: 10%;
+			content: "\2022";
+			font-size: .5rem;
+      line-height: 1.2rem;
+      text-indent: -1.5em;
+      position: absolute;
+		}
+	}
+}

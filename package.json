@@ -1,0 +1,30 @@
+{
+  "name": "ally.com",
+  "version": "1.0.0",
+  "description": "Ally code challenge",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irenose/ally_challenge.git"
+  },
+  "author": "Reno Idehenre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/irenose/ally_challenge/issues"
+  },
+  "homepage": "https://github.com/irenose/ally_challenge#readme"
+}
