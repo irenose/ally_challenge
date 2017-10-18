@@ -77,7 +77,7 @@
                     </p>
                   </div>
                   <div class="info-graphic-block span-2-of-12">
-                    <img src="assets/images/mobile-phone" alt="Mobile phone">
+                    <img src="assets/images/mobile-phone.png" alt="Mobile phone">
                   </div>
                 </div>
 
@@ -229,12 +229,7 @@
       </div>
     </div>
   </footer>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-  <script>
-    if (typeof jQuery == 'undefined') {
-      document.write(unescape("%3Cscript src='scripts/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
-    }
-  </script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
   <script>
     $(document).ready(function(){
       function loadRates() {
@@ -260,7 +255,8 @@
           msg += '<div class="deposit-amount push-up-10 spacer-80">&#42;Based on &#36;50,000 deposit.</div>'
           $('#rate-container').prepend(msg);                               // Add rates to page
         }).fail( function() {
-          $('#rate-container').text('Sorry, we cannot load rates.');   // Show error message
+          $('#rate-container').text('Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, https. Current json location: ');   // Show error message
+          $('#rate-container').css({"color": "red", "padding-bottom": "20px"});
         });
       }
       loadRates();
